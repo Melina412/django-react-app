@@ -11,6 +11,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='refresh_token'),
     path('api-auth/', include('rest_framework.urls')),
     path('api/users/', get_user_list, name='user-list'), #!
+    path('api/', include('api.urls')),
 ]
 
 #! nur um user in db schnell zu checken, weil es scheinbar in den django panel views zu verzögerungen kommt
