@@ -1,4 +1,4 @@
-import '../sass/NoteItem.scss';
+import '../assets/sass/NoteItem.scss';
 
 export interface Note {
   title: string;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../api';
 import NoteItem, { Note } from '../components/NoteItem';
-import '../sass/Home.scss';
+import '../assets/sass/Home.scss';
 
 function Home() {
   const [notes, setNotes] = useState<Note[]>([]);
