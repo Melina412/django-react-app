@@ -10,11 +10,11 @@ type FormProps = {
   requestMethod: string;
 };
 
-// 'Form' weist der Komponente automatisch den Typ "IntrinsicAttributes & FormProps & RefAttributes<HTMLFormElement>" zu und dann kann an keine props übergeben, die dafür nicht zugelassen sind
+// 'Form' weist der Komponente automatisch den Typ "IntrinsicAttributes & FormProps & RefAttributes<HTMLFormElement>" zu und kann dann keine props übergeben, die dafür nicht zugelassen sind
 function LoginRegisterForm({ route, requestMethod }: FormProps) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const name = requestMethod === 'login' ? 'Login' : 'Register';
