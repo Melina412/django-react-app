@@ -9,12 +9,14 @@ import Fallback from './components/error/Fallback';
 
 function Logout() {
   localStorage.clear();
+  console.log('local storage cleared, redirecting to login');
   return <Navigate to='/login' />;
 }
 
 // nach register local storage leeren um fehler durch abgelaufene access token zu vermeiden
 function RegisterAndLogout() {
   localStorage.clear();
+  console.log('local storage cleared, redirecting to register');
   return <Register />;
 }
 
@@ -32,7 +34,8 @@ function App() {
             }
           />
           <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/register' element={<RegisterAndLogout />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

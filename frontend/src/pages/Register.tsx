@@ -1,7 +1,9 @@
+import LoginRegisterForm from '../components/LoginRegisterForm';
+
 function Register() {
   return (
     <>
-      <div>Register</div>
+      <LoginRegisterForm route='/api/user/register/' requestMethod='register' />
     </>
   );
 }

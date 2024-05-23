@@ -1,7 +1,9 @@
+import LoginRegisterForm from '../components/LoginRegisterForm';
+
 function Login() {
   return (
     <>
-      <div>Login</div>
+      <LoginRegisterForm route='/api/token/' requestMethod='login' />
     </>
   );
 }
